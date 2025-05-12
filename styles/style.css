@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Cascadia+Code:ital,wght@0,200..700;1,200..700&display=swap');
+
+:root {
+    --main-color: #6E859F;
+    --secondary-color: #284260;
+    --contrast-color: #C928FC;
+}
+
+body {
+    font-family: 'Cascadia Code', monospace;
+    color: var(--main-color);
+}
+
+h1, h2, h5 {
+    color: var(--secondary-color);
+    font-weight: 700;
+}
+
+.lead, .btn-link {
+    color: var(--contrast-color);
+    font-weight: 700;
+}
+
+a, .btn-link:hover {
+    color: var(--main-color);
+}
+
+a:hover {
+    color: var(--contrast-color);
+}
