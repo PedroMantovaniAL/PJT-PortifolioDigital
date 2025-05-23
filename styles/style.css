@@ -1,14 +1,36 @@
 @import url('https://fonts.googleapis.com/css2?family=Cascadia+Code:ital,wght@0,200..700;1,200..700&display=swap');
 
 :root {
-    --main-color: #6E859F;
-    --secondary-color: #284260;
-    --contrast-color: #C928FC;
+    --main-color: #6e739f;
+    --secondary-color: #7b419c;
+    --contrast-color: #fcf94e;
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.699);
+}
+
+img.rounded-circle {
+    width: 150px;
+    height: 150px;
+    margin-left: 20vw;
+    margin-top: 20px;
+}
+
+div.card {
+    width: 18rem;
+    background-color: var(--main-color);
+    color: white;
+}
+
+div.card:hover {
+    background-color: var(--secondary-color);
 }
 
 body {
     font-family: 'Cascadia Code', monospace;
     color: var(--main-color);
+    background-color: rgb(31, 31, 31);
 }
 
 h1, h2, h5 {
@@ -16,15 +38,25 @@ h1, h2, h5 {
     font-weight: 700;
 }
 
-.lead, .btn-link {
-    color: var(--contrast-color);
+span.badge {
+    background-color: var(--main-color);
+}
+
+span:hover {
+    background-color: var(--contrast-color);
+    color: var(--main-color)
+}
+
+a, .lead, .btn-link {
+    color: var(--main-color);
     font-weight: 700;
 }
 
-a, .btn-link:hover {
-    color: var(--main-color);
+a:hover, .btn-link:hover {
+    color: var(--contrast-color);
 }
 
-a:hover {
-    color: var(--contrast-color);
+footer {
+    background-color: rgba(47, 29, 88, 0.678);
+    color: var(--main-color);
 }
