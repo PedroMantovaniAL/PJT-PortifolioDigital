@@ -1,13 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Cascadia+Code:ital,wght@0,200..700;1,200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
 
 :root {
-    --main-color: #6e739f;
-    --secondary-color: #7b419c;
-    --contrast-color: #fcf94e;
+    --main-color: #10598a;
+    --secondary-color: #680a9e;
+    --contrast-color: #fcf81d;
+}
+
+body {
+    font-family: 'Cascadia Code', monospace;
+    background: linear-gradient(to top, black, rgb(39, 39, 39));
 }
 
 header {
-    background-color: rgba(0, 0, 0, 0.699);
+    background-color: rgb(71, 71, 71);
+    box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.562);
 }
 
 img.rounded-circle {
@@ -17,38 +23,53 @@ img.rounded-circle {
     margin-top: 20px;
 }
 
-div.card {
-    width: 18rem;
+h1, h2, h5 {
+    color: black;
+    font-weight: 700;
+}
+
+p {
+    font-size: 1.2rem;
+    color: white;
+}
+
+a.btn.btn-lg.px-5.py-3.fs-2 {
     background-color: var(--main-color);
     color: white;
 }
 
-div.card:hover {
-    background-color: var(--secondary-color);
+a.btn.btn-lg.px-5.py-3.fs-2:hover {
+    background-color: var(--secondary-color) !important;
+    color: black;
+    transition: transform 0.3s ease;
+    transform: scale(1.03);
 }
 
-body {
-    font-family: 'Cascadia Code', monospace;
-    color: var(--main-color);
-    background-color: rgb(31, 31, 31);
+p.card-text {
+    color: black;
 }
 
-h1, h2, h5 {
-    color: var(--secondary-color);
-    font-weight: 700;
-}
-
-span.badge {
+.card {
+    width: 18rem;
     background-color: var(--main-color);
+    color: black;
+    will-change: transform;
+    backface-visibility: hidden;
+    transition: transform 0.3s ease;
 }
 
-span:hover {
-    background-color: var(--contrast-color);
-    color: var(--main-color)
+.card:hover {
+    background-color: var(--secondary-color);
+    transform: scale(1.03);
+}
+
+div.modal-body > p {
+    font-size: 1.2rem;
+    color: black;
 }
 
 a, .lead, .btn-link {
-    color: var(--main-color);
+    color: black;
     font-weight: 700;
 }
 
@@ -57,6 +78,6 @@ a:hover, .btn-link:hover {
 }
 
 footer {
-    background-color: rgba(47, 29, 88, 0.678);
-    color: var(--main-color);
+    background-color: rgba(57, 34, 110, 0.678);
+    color: black;
 }
