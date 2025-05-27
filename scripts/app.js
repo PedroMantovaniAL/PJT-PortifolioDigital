@@ -29,12 +29,15 @@ function buildCarousel() {
 
         row.appendChild(cardWrapper.firstElementChild.cloneNode(true));
     });
-    if (cardsPerPage === 2) {
+    const removible = carousel.querySelectorAll('.removible');
+    if (cardsPerPage === 2 && removible.length === 0) {
         carouselButtons.forEach(button => {
             carousel.appendChild(button.firstElementChild.cloneNode(true));
         });
-    } else {
-        carousel.removeChild(carousel.querySelector('.carousel-controls'));
+    } else if (cardsPerPage === 3) {
+        removible.forEach( removible => {
+            carousel.removeChild(removible);
+        });
     }
 }
 
