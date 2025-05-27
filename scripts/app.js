@@ -1,6 +1,8 @@
 function buildCarousel() {
     const cardPool = document.querySelectorAll('#cardPool .card-wrapper');
     const carouselInner = document.querySelector('#carouselExample .carousel-inner');
+    const carouselButtons = document.querySelectorAll('#carouselButtons .carousel-controls');
+    const carousel = document.querySelector('#carouselExample');
     carouselInner.innerHTML = '';
     const isLargeScreen = window.innerWidth >= 1100;
     const cardsPerPage = isLargeScreen ? 3 : 2;
@@ -27,6 +29,13 @@ function buildCarousel() {
 
         row.appendChild(cardWrapper.firstElementChild.cloneNode(true));
     });
+    if (cardsPerPage === 2) {
+        carouselButtons.forEach(button => {
+            carousel.appendChild(button.firstElementChild.cloneNode(true));
+        });
+    } else {
+        carousel.removeChild(carousel.querySelector('.carousel-controls'));
+    }
 }
 
 window.addEventListener('load', buildCarousel);
