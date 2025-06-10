@@ -1,42 +1,57 @@
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
 
 :root {
-    --main-color: #10598a;
+    --main-color: #146eaa;
     --secondary-color: #680a9e;
     --contrast-color: #fcf81d;
 }
 
 body {
-    font-family: 'Cascadia Code', monospace;
-    background-color:rgb(39, 39, 39);
+    font-family: 'Quicksand', 'Montserrat', sans-serif;
+    background-color:rgb(70, 70, 70);
+    color: white;
 }
 
 header {
-    background-color: rgb(71, 71, 71);
-    box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.562);
+    background: linear-gradient(to top, rgb(129, 0, 180), rgb(85, 0, 119));
+    box-shadow: 0px 0px 15px 5px rgba(48, 0, 77, 0.5);
+}
+
+nav.navbar {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.parallax-animation {
+    height: 75vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.icon-link {
+    font-size: 1.5rem;
+    margin-right: 15px;
 }
 
 img.rounded-circle {
     width: 150px;
     height: 150px;
-    margin-left: 20vw;
-    margin-top: 20px;
 }
 
 h1, h2, h5 {
-    color: black;
     font-weight: 700;
 }
 
 div.py-3 {
-    background-color: rgb(230, 230, 230);
+    background-color: rgb(90, 90, 90);
     border-radius: 10px;
-    box-shadow: 0px 0px 15px 8px rgba(0, 0, 0, 0.562);
+    box-shadow: 0px 0px 15px 3px rgba(40, 0, 63, 0.3);
 }
 
 p {
     font-size: 1.2rem;
-    color: black;
 }
 
 a.btn.btn-lg.px-5.py-3.fs-2 {
@@ -81,9 +96,4 @@ a, .lead, .btn-link {
 
 a:hover, .btn-link:hover {
     color: var(--contrast-color);
-}
-
-footer {
-    background-color: rgba(57, 34, 110, 0.678);
-    color: black;
 }
